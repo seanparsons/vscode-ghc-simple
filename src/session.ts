@@ -35,7 +35,7 @@ export class Session implements vscode.Disposable {
                     });
                     return ['stack', 'repl', '--no-load'].concat(result.split(/\r?\n/)).slice(0, -1);
                 } else if (wst == 'cabal')
-                    return ['cabal', 'repl'];
+                    return ['cabal', 'new-repl'];
                 else if (wst == 'bare-stack')
                     return ['stack', 'exec', 'ghci'];
                 else if (wst == 'bare')
